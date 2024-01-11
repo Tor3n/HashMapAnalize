@@ -1,0 +1,1 @@
+cmd /c "java -jar --add-opens java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED HmAnalize.jar" || cmd /c "javac HashClient.java" && TIMEOUT /T 1 && jar cmvf META-INF/MANIFEST.MF HmAnalize.jar * && TIMEOUT /T 1 && del "*.class" && cmd /c "java -jar --add-opens java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED HmAnalize.jar"
